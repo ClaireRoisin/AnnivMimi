@@ -5,12 +5,6 @@ import folium
 from streamlit_folium import st_folium
 
 
-
-link = 'https://api-adresse.data.gouv.fr/search/?q=728+Route+de+Villerest&postcode=42155'
-r = requests.get(link).json()
-r
-
-
 with st.sidebar :   
     st.write('Bienvenue root')
     selection = option_menu(
