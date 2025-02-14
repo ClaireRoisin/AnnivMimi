@@ -1,5 +1,15 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+import requests
+import folium
+from streamlit_folium import st_folium
+
+
+
+link = 'https://api-adresse.data.gouv.fr/search/?q=728+Route+de+Villerest&postcode=42155'
+r = requests.get(link).json()
+r
+
 
 with st.sidebar :   
     st.write('Bienvenue root')
@@ -7,19 +17,32 @@ with st.sidebar :
         menu_title=None,
         options = ["Accueil", "Où ?","Organisation"])
  
-    # On indique au programme quoi faire en fonction du choix
+# On indique au programme quoi faire en fonction du choix
 if selection == "Accueil":
     st.title("Genviève faite ses 70 ans !")
-    st.image("Mimi1.jpg")
-elif selection == "Où ?":
-    st.title("Ils sont pas trop choupinous ???")
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("chat1.jpg")
+        st.image("Mimi2.jpg")
     with col2:
-        st.image("chat2.jpg")
+        st.image("mimi1.jpg")
     with col3:
-        st.image("chat3.jpg")
+        st.image("Mimi3.jpg")
+
+elif selection == "Où ?":
+    st.header("Sur l'île d'Oléron")
+    point = [45.972916, -1.379777]              # coordo du site
+    m = folium.Map(location=point,zoom_start=7)             #carte centrée sur le lieu
+    folium.Marker(location=point,popup="L'emplacement idéal pour une fête de folie !").add_to(m)        # marker pour le lieu
+
+    st_folium(m, width=700, height=500) # affichage de la carte
+    col4, col5, col6 = st.columns(3)
+    with col4:
+        st.image("domino1.jpg")
+    with col5:
+        st.image("domino2.jpg")
+    with col6:
+        st.image("domino3.jpg")
+
 elif selection == "Organisation" :
     st.title("Organisation :")
     st.write('')
