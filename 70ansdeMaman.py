@@ -44,7 +44,7 @@ with st.sidebar :
  
 # On indique au programme quoi faire en fonction du choix
 if selection == "Accueil":
-    st.title("Genviève fête ses 70 ans !")
+    st.title("Geneviève fête ses 70 ans !")
     col1, col2, col3 = st.columns([1, 2, 1])  # La colonne du milieu est plus grande
     with col2:
         st.image("mimi1.jpg",width=700)
