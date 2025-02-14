@@ -45,7 +45,7 @@ with st.sidebar :
 # On indique au programme quoi faire en fonction du choix
 if selection == "Accueil":
     st.title("Genviève fête ses 70 ans !")
-    st.image("mimi1.jpg")
+    st.image("mimi1.jpg",width=300)
     st.header('Reservez dès maintenant votre Weekend du 6 et 7 avril 2025 !')
     
 elif selection == "Où ?":
