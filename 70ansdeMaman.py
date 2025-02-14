@@ -36,13 +36,13 @@ elif selection == "Organisation" :
     st.header('Pour dormir :')
     st.write('Les chambres sont composées de 2 ou 4 lits. Nous vous indiquerons votre chambre à votre arrivée !')
     st.write('Des draps peuvent être loués sur place pour ... € ou vous pouvez apporter les votres.')
-    st.image("domino5")
+    st.image("domino5.jpg")
     st.write('')
     st.header('Pour manger :')
     st.write('Le samedi midi : Comme chacun arrivera à son rythme, nous vous proposons que chacun apporte son pique-nique !')
     st.write("Le samedi soir : On s'occupe de tout 😉")
     st.write("Dimanche midi : Repas en mode 'Auberge espagnole'. Chacun apporte sa p'tite spécialité à partager (ne prévoyez pas trop, l'idée est de rentrer à vide !)")
-    st.image("domino6")
+    st.image("domino6.jpg")
 
 
 
