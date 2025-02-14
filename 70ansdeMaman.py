@@ -14,6 +14,7 @@ with st.sidebar :
 if selection == "Accueil":
     st.title("Genviève fête ses 70 ans !")
     st.image("mimi1.jpg")
+    st.header('Reservez dès maintenant votre Weekend du 6 et 7 avril 2025 !')
     
 elif selection == "Où ?":
     st.header("Sur l'île d'Oléron")
@@ -27,7 +28,7 @@ elif selection == "Où ?":
     st.write("111-25 Rue Aristide Briand")
     st.write("17190 Saint-Georges-d'Oléron")
     st.write("")
-    
+
     col4, col5, col6 = st.columns(3)
     with col4:
         st.image("domino1.jpg")
