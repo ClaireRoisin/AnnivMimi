@@ -4,7 +4,7 @@ import requests
 import folium
 from streamlit_folium import st_folium
 
-st.set_page_config(page_title="Mode Olive", layout="wide")
+st.set_page_config(page_title="Anniversaire de Mimi", layout="wide")
 
 # Appliquer un fond vert olive + texte beige
 st.markdown(
@@ -12,7 +12,7 @@ st.markdown(
     <style>
         /* Fond principal */
         .stApp {
-            background-color: #608270;  /* Anniversaire de Mimi */
+            background-color: #608270;  /* Mode Olive */
         }
 
         /* Texte principal en beige et centré */
