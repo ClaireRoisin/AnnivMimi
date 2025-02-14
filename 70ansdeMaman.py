@@ -58,7 +58,7 @@ elif selection == "Où ?":
     folium.Marker(location=point,popup="L'emplacement idéal pour une fête de folie !").add_to(m)        # marker pour le lieu
     col1, col2, col3 = st.columns([1, 2, 1])  # La colonne du milieu est plus grande
     with col2:
-        st_folium(m, width=750, height=600) # affichage de la carte
+        st_folium(m, width=700, height=500) # affichage de la carte
 
     st.write("111-25 Rue Aristide Briand")
     st.write("17190 Saint-Georges-d'Oléron")
@@ -80,7 +80,7 @@ elif selection == "Organisation" :
     st.write('Des draps peuvent être loués sur place pour ... € ou vous pouvez apporter les votres.')
     col1, col2, col3 = st.columns([1, 2, 1])  # La colonne du milieu est plus grande
     with col2:
-        st.image("domino5.jpg")
+        st.image("domino5.jpg",width=400)
     st.write('')
     st.header('Pour manger :')
     st.write('Le samedi midi : Comme chacun arrivera à son rythme, nous vous proposons que chacun apporte son pique-nique !')
@@ -88,7 +88,7 @@ elif selection == "Organisation" :
     st.write("Dimanche midi : Repas en mode 'Auberge espagnole'. Chacun apporte sa p'tite spécialité à partager (ne prévoyez pas trop, l'idée est de rentrer à vide !)")
     col1, col2, col3 = st.columns([1, 2, 1])  # La colonne du milieu est plus grande
     with col2:
-        st.image("domino6.jpg")
+        st.image("domino6.jpg",width=400)
 
 
 
