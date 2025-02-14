@@ -43,10 +43,11 @@ with col2:
 st.header('Réservez dès maintenant votre Weekend du 6 et 7 avril 2025 !')
 
    
-menu = st.selectbox('Afficher le menu',['Où ?','Organisation'])
+lieu = st.button('Où ?')
+orga = st.button('Organisation')
  
 # On indique au programme quoi faire en fonction du choix
-if menu == "Où ?":
+if lieu :
     st.header("Sur l'île d'Oléron")
     st.write("Au cœur du village de Domino, dans la commune de Saint-Georges-d’Oléron, à seulement 700m de la plage !")
     point = [45.972916, -1.379777]              # coordo du site
