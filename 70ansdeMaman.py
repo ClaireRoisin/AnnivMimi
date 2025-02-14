@@ -23,7 +23,7 @@ st.markdown(
 
         /* Modifier la couleur des inputs et boutons */
         .stTextInput > label, .stButton > button {
-            color: #F5F5DC !important;  /* Beige */
+            color: #608270 !important;  /* Beige */
         }
 
         /* Centrer le titre */
@@ -39,7 +39,7 @@ st.markdown(
 st.title("Geneviève fête ses 70 ans !")
 col1, col2, col3 = st.columns([1, 2, 1])  # La colonne du milieu est plus grande
 with col2:
-    st.image("mimi1.jpg",width=700)
+    st.image("Mimi5.png",width=700)
 st.header('Réservez dès maintenant votre Weekend du 6 et 7 avril 2025 !')
 
    
@@ -69,7 +69,7 @@ if lieu :
     with col6:
         st.image("domino3.jpg")
 
-elif menu == "Organisation" :
+elif orga :
     st.title("Organisation :")
     st.write('')
     st.header('Pour dormir :')
