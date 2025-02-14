@@ -32,7 +32,7 @@ st.markdown(
         }
 
         .stButton>button {
-            background-color: #F5F5DC;  /* Couleur de fond du bouton */
+            background-color: #334634;  /* Couleur de fond du bouton */
             color: #F5F5DC;             /* Couleur du texte */
             border: none;             /* Pas de bordure */
             padding: 10px 20px;       /* Espacement interne */
@@ -50,17 +50,26 @@ st.markdown(
 )
 
 st.title("Geneviève fête ses 70 ans !")
-col1, col2, col3 = st.columns([2, 2, 1])  # La colonne du milieu est plus grande
+col1, col2, col3 = st.columns([1, 1, 1])  # La colonne du milieu est plus grande
 with col2:
     st.image("Mimi5.png",width=700)
 st.header('Réservez dès maintenant votre Weekend du 6 et 7 avril 2025 !')
 
    
+# Boutons
 lieu = st.button('Où ?')
 orga = st.button('Organisation')
- 
-# On indique au programme quoi faire en fonction du choix
-if lieu :
+
+# On gère l'état des boutons dans session_state
+if lieu:
+    st.session_state.lieu_clicked = True
+    st.session_state.orga_clicked = False
+if orga:
+    st.session_state.orga_clicked = True
+    st.session_state.lieu_clicked = False
+
+# Partie "Lieu"
+if st.session_state.lieu_clicked:
     st.header("Sur l'île d'Oléron")
     st.write("Au cœur du village de Domino, dans la commune de Saint-Georges-d’Oléron, à seulement 700m de la plage !")
     point = [45.972916, -1.379777]              # coordo du site
@@ -82,13 +91,13 @@ if lieu :
     with col6:
         st.image("domino3.jpg")
 
-elif orga :
+if st.session_state.orga_clicked :
     st.title("Organisation :")
     st.write('')
     st.header('Pour dormir :')
     st.write('Les chambres sont composées de 2 ou 4 lits. Nous vous indiquerons votre chambre à votre arrivée !')
     st.write('Des draps peuvent être loués sur place pour ... € ou vous pouvez apporter les votres.')
-    col1, col2, col3 = st.columns([2, 1, 1])  # La colonne du milieu est plus grande
+    col1, col2, col3 = st.columns([2, 1, 2])  # La colonne du milieu est plus grande
     with col2:
         st.image("domino5.jpg",width=400)
     st.write('')
@@ -96,7 +105,7 @@ elif orga :
     st.write('Le samedi midi : Comme chacun arrivera à son rythme, nous vous proposons que chacun apporte son pique-nique !')
     st.write("Le samedi soir : On s'occupe de tout 😉")
     st.write("Dimanche midi : Repas en mode 'Auberge espagnole'. Chacun apporte sa p'tite spécialité à partager (ne prévoyez pas trop, l'idée est de rentrer à vide !)")
-    col1, col2, col3 = st.columns([2, 1, 1])  # La colonne du milieu est plus grande
+    col1, col2, col3 = st.columns([2, 1,2])  # La colonne du milieu est plus grande
     with col2:
         st.image("domino6.jpg",width=400)
 
