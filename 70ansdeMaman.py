@@ -36,21 +36,19 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+st.title("Geneviève fête ses 70 ans !")
+col1, col2, col3 = st.columns([1, 2, 1])  # La colonne du milieu est plus grande
+with col2:
+    st.image("mimi1.jpg",width=700)
+st.header('Réservez dès maintenant votre Weekend du 6 et 7 avril 2025 !')
 
-with st.sidebar :   
-    selection = option_menu(
-        menu_title=None,
-        options = ["Accueil", "Où ?","Organisation"])
+   
+menu = option_menu(
+    menu_title=None,
+    options = ["Où ?","Organisation"])
  
 # On indique au programme quoi faire en fonction du choix
-if selection == "Accueil":
-    st.title("Geneviève fête ses 70 ans !")
-    col1, col2, col3 = st.columns([1, 2, 1])  # La colonne du milieu est plus grande
-    with col2:
-        st.image("mimi1.jpg",width=700)
-    st.header('Réservez dès maintenant votre Weekend du 6 et 7 avril 2025 !')
-    
-elif selection == "Où ?":
+if menu == "Où ?":
     st.header("Sur l'île d'Oléron")
     st.write("Au cœur du village de Domino, dans la commune de Saint-Georges-d’Oléron, à seulement 700m de la plage !")
     point = [45.972916, -1.379777]              # coordo du site
@@ -72,7 +70,7 @@ elif selection == "Où ?":
     with col6:
         st.image("domino3.jpg")
 
-elif selection == "Organisation" :
+elif menu == "Organisation" :
     st.title("Organisation :")
     st.write('')
     st.header('Pour dormir :')
