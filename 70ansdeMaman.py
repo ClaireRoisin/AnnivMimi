@@ -17,11 +17,17 @@ if selection == "Accueil":
     
 elif selection == "Où ?":
     st.header("Sur l'île d'Oléron")
+    st.write("Au cœur du village de Domino, dans la commune de Saint-Georges-d’Oléron, à seulement 700m de la plage !")
     point = [45.972916, -1.379777]              # coordo du site
     m = folium.Map(location=point,zoom_start=7)             #carte centrée sur le lieu
     folium.Marker(location=point,popup="L'emplacement idéal pour une fête de folie !").add_to(m)        # marker pour le lieu
 
     st_folium(m, width=700, height=500) # affichage de la carte
+
+    st.write("111-25 Rue Aristide Briand")
+    st.write("17190 Saint-Georges-d'Oléron")
+    st.write("")
+    
     col4, col5, col6 = st.columns(3)
     with col4:
         st.image("domino1.jpg")
