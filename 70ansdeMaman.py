@@ -79,7 +79,12 @@ if st.session_state.lieu_clicked:
     st.write("Au cœur du village de Domino, dans la commune de Saint-Georges-d’Oléron, à seulement 700m de la plage !")
     point = [45.972916, -1.379777]              # coordo du site
     m = folium.Map(location=point,zoom_start=7)             #carte centrée sur le lieu
-    folium.Marker(location=point,popup="L'emplacement idéal pour une fête de folie !").add_to(m)        # marker pour le lieu
+    # Charger la carte et le marqueur une seule fois
+    if 'm' not in st.session_state:
+        point = [45.972916, -1.379777]
+        # Créer la carte et ajouter le marqueur
+        st.session_state.m = folium.Map(location=point, zoom_start=7)
+        folium.Marker(location=point, popup="L'emplacement idéal pour une fête de folie !").add_to(st.session_state.m)
     col1, col2, col3 = st.columns([1, 2, 1])  # La colonne du milieu est plus grande
     with col2:
         st_folium(m, width=500, height=400) # affichage de la carte
