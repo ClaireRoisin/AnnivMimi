@@ -43,9 +43,7 @@ with col2:
 st.header('Réservez dès maintenant votre Weekend du 6 et 7 avril 2025 !')
 
    
-menu = option_menu(
-    menu_title=None,
-    options = ["Où ?","Organisation"])
+menu = st.selectbox('Afficher le menu',['Où ?','Organisation'])
  
 # On indique au programme quoi faire en fonction du choix
 if menu == "Où ?":
