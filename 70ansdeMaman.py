@@ -31,6 +31,19 @@ st.markdown(
             text-align: center
         }
 
+        .stButton>button {
+            background-color: #608270;  /* Couleur de fond du bouton */
+            color: #608270;             /* Couleur du texte */
+            border: none;             /* Pas de bordure */
+            padding: 10px 20px;       /* Espacement interne */
+            border-radius: 5px;       /* Coins arrondis */
+            font-size: 16px;          /* Taille du texte */
+            cursor: pointer;         /* Curseur en forme de main */
+        }
+        .stButton>button:hover {
+            background-color: darkgreen;  /* Couleur du bouton au survol */
+        }
+
     </style>
     """,
     unsafe_allow_html=True
