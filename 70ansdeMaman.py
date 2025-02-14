@@ -4,6 +4,38 @@ import requests
 import folium
 from streamlit_folium import st_folium
 
+st.set_page_config(page_title="Mode Olive", layout="wide")
+
+# Appliquer un fond vert olive + texte beige
+st.markdown(
+    """
+    <style>
+        /* Fond principal */
+        .stApp {
+            background-color: #608270;  /* Vert olive */
+        }
+
+        /* Texte principal en beige et centré */
+        h1, h2, h3, h4, h5, h6, p, div, span, label {
+            color: #F5F5DC !important;  /* Beige */
+            text-align: center !important;  /* Centrer le texte */
+        }
+
+        /* Modifier la couleur des inputs et boutons */
+        .stTextInput > label, .stButton > button {
+            color: #F5F5DC !important;  /* Beige */
+        }
+
+        /* Centrer le titre */
+        .title {
+            text-align: center
+        }
+
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 with st.sidebar :   
     selection = option_menu(
