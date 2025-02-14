@@ -23,7 +23,7 @@ st.markdown(
 
         /* Modifier la couleur des inputs et boutons */
         .stTextInput > label, .stButton > button {
-            color: #608270 !important;  /* Beige */
+            color: #608270 !important;  /* Vert */
         }
 
         /* Centrer le titre */
