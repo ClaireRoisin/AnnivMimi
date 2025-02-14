@@ -55,7 +55,12 @@ with col2:
     st.image("Mimi5.png",width=700)
 st.header('Réservez dès maintenant votre Weekend du 6 et 7 avril 2025 !')
 
-   
+# Utiliser session_state pour garder une trace des boutons
+if 'lieu_clicked' not in st.session_state:
+    st.session_state.lieu_clicked = False
+if 'orga_clicked' not in st.session_state:
+    st.session_state.orga_clicked = False
+
 # Boutons
 lieu = st.button('Où ?')
 orga = st.button('Organisation')
@@ -77,7 +82,7 @@ if st.session_state.lieu_clicked:
     folium.Marker(location=point,popup="L'emplacement idéal pour une fête de folie !").add_to(m)        # marker pour le lieu
     col1, col2, col3 = st.columns([1, 2, 1])  # La colonne du milieu est plus grande
     with col2:
-        st_folium(m, width=700, height=500) # affichage de la carte
+        st_folium(m, width=500, height=400) # affichage de la carte
 
     st.write("111-25 Rue Aristide Briand")
     st.write("17190 Saint-Georges-d'Oléron")
