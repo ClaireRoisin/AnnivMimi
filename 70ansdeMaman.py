@@ -47,7 +47,7 @@ if selection == "Accueil":
     st.title("Genviève fête ses 70 ans !")
     col1, col2, col3 = st.columns([1, 2, 1])  # La colonne du milieu est plus grande
     with col2:
-        st.image("mimi1.jpg",width=500)
+        st.image("mimi1.jpg",width=800)
     st.header('Reservez dès maintenant votre Weekend du 6 et 7 avril 2025 !')
     
 elif selection == "Où ?":
