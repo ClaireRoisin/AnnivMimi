@@ -13,15 +13,9 @@ with st.sidebar :
  
 # On indique au programme quoi faire en fonction du choix
 if selection == "Accueil":
-    st.title("Genviève faite ses 70 ans !")
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.image("Mimi2.jpg")
-    with col2:
-        st.image("mimi1.jpg")
-    with col3:
-        st.image("Mimi3.jpg")
-
+    st.title("Genviève fête ses 70 ans !")
+    st.image("mimi1.jpg")
+    
 elif selection == "Où ?":
     st.header("Sur l'île d'Oléron")
     point = [45.972916, -1.379777]              # coordo du site
