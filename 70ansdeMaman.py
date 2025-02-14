@@ -32,8 +32,8 @@ st.markdown(
         }
 
         .stButton>button {
-            background-color: #608270;  /* Couleur de fond du bouton */
-            color: #608270;             /* Couleur du texte */
+            background-color: #5e785f;  /* Couleur de fond du bouton */
+            color: #F5F5DC;             /* Couleur du texte */
             border: none;             /* Pas de bordure */
             padding: 10px 20px;       /* Espacement interne */
             border-radius: 5px;       /* Coins arrondis */
