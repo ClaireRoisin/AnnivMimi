@@ -100,8 +100,8 @@ if st.session_state.orga_clicked :
     st.title("Organisation :")
     st.write('')
     st.header('Pour dormir :')
-    st.write('Les chambres sont composées de 2 ou 4 lits. Nous vous indiquerons votre chambre à votre arrivée !')
-    st.write('Des draps peuvent être loués sur place pour ... € ou vous pouvez apporter les votres.')
+    st.write('Les chambres sont composées de 2 ou 4 lits simples. Nous vous indiquerons votre chambre à votre arrivée !')
+    st.write('Attention, vous devrez apporter les vôtres !')
     col1, col2, col3 = st.columns([2, 1, 2])  # La colonne du milieu est plus grande
     with col2:
         st.image("domino5.jpg",width=400)
