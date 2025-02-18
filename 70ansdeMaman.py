@@ -100,10 +100,10 @@ if st.session_state.orga_clicked :
     st.title("Organisation :")
     st.write('')
     st.header('Pour dormir :')
-    st.write('vous avez la possibilité de dormir sur place dès le vendredi soir. Merci de nous dire si vous envisagez cette solution.')
+    st.write('Vous avez la possibilité de dormir sur place dès le vendredi soir. Merci de nous dire si vous envisagez cette solution.')
     st.write('Les chambres sont composées de lits simples. Nous vous indiquerons votre chambre à votre arrivée !')
-    st.write('Attention, les draps ne seront pas fournis : penseez à apporter vos draps, sacs de couchage ou couette... !')
-    st.write('Nous demandons une participation de 20€ par personne.')
+    st.write('Attention, les draps ne seront pas fournis : pensez à apporter vos draps, sacs de couchage ou couette... !')
+    st.write('Nous demandons une participation de 20€ par personne pour le couchage.')
 
     st.write('')
     st.write('Merci de nous dire au plus vite si on vous compte une chambre !')
