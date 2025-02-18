@@ -52,7 +52,7 @@ st.markdown(
 st.title("Geneviève fête ses 70 ans !")
 col1, col2, col3 = st.columns([1, 1, 1])  # La colonne du milieu est plus grande
 with col2:
-    st.image("Mimi5.png",width=700)
+    st.image("Mimi6.png",width=700)
 st.header('Réservez dès maintenant votre Weekend du 6 et 7 avril 2025 !')
 
 # Utiliser session_state pour garder une trace des boutons
@@ -100,9 +100,12 @@ if st.session_state.orga_clicked :
     st.title("Organisation :")
     st.write('')
     st.header('Pour dormir :')
-    st.write('Vous pouvez dormir sur place. Nous demandons une participation de 16€ par personne.')
-    st.write('Les chambres sont composées de 2 ou 4 lits simples. Nous vous indiquerons votre chambre à votre arrivée !')
-    st.write('Attention, les draps ne seront pas fournis : vous devrez apporter les vôtres !')
+    st.write('vous avez la possibilité de dormir sur place dès le vendredi soir. Merci de nous dire si vous envisagez cette solution.')
+    st.write('Les chambres sont composées de lits simples. Nous vous indiquerons votre chambre à votre arrivée !')
+    st.write('Attention, les draps ne seront pas fournis : penseez à apporter vos draps, sacs de couchage ou couette... !')
+    st.write('Nous demandons une participation de 20€ par personne.')
+
+    st.write('')
     st.write('Merci de nous dire au plus vite si on vous compte une chambre !')
     
     col1, col2, col3 = st.columns([2, 1, 2])  # La colonne du milieu est plus grande
